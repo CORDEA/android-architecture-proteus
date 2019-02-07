@@ -1,1 +1,3 @@
 include ':app', ':infra', ':presentation'
+
+include ':ui:ui-main'
