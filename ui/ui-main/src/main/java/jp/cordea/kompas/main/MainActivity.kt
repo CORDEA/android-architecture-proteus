@@ -8,9 +8,8 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
-import jp.cordea.kompas.R
-import jp.cordea.kompas.databinding.ActivityMainBinding
 import jp.cordea.kompas.infra.events.EventResponse
+import jp.cordea.kompas.main.databinding.ActivityMainBinding
 import jp.cordea.kompas.presentation.main.MainContract
 import javax.inject.Inject
 

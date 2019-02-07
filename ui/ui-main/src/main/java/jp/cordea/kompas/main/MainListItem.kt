@@ -1,8 +1,7 @@
 package jp.cordea.kompas.main
 
 import com.xwray.groupie.databinding.BindableItem
-import jp.cordea.kompas.R
-import jp.cordea.kompas.databinding.ListItemMainBinding
+import jp.cordea.kompas.main.databinding.ListItemMainBinding
 import javax.inject.Inject
 
 class MainListItem @Inject constructor(
