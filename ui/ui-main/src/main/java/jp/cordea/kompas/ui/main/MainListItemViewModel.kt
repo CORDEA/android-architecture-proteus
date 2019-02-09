@@ -1,4 +1,4 @@
-package jp.cordea.kompas.main
+package jp.cordea.kompas.ui.main
 
 import android.os.Parcelable
 import jp.cordea.kompas.infra.EventId

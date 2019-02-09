@@ -1,4 +1,4 @@
-package jp.cordea.kompas.main
+package jp.cordea.kompas.ui.main
 
 import android.os.Bundle
 import android.view.Menu
@@ -9,7 +9,7 @@ import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
 import jp.cordea.kompas.infra.events.EventResponse
-import jp.cordea.kompas.main.databinding.ActivityMainBinding
+import jp.cordea.kompas.ui.main.databinding.ActivityMainBinding
 import jp.cordea.kompas.presentation.main.MainContract
 import javax.inject.Inject
 

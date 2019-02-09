@@ -3,7 +3,7 @@ package jp.cordea.kompas.detail
 import com.xwray.groupie.databinding.BindableItem
 import jp.cordea.kompas.R
 import jp.cordea.kompas.databinding.ListItemInfoBinding
-import jp.cordea.kompas.main.MainListItemViewModel
+import jp.cordea.kompas.ui.main.MainListItemViewModel
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.ISODateTimeFormat
 import javax.inject.Inject
