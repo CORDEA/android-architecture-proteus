@@ -5,7 +5,7 @@ import io.reactivex.Maybe
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import jp.cordea.kompas.infra.events.EventsResponse
-import jp.cordea.kompas.infra.favorite.Favorite
+import jp.cordea.kompas.infra.favorite.FavoriteEntity
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -19,7 +19,7 @@ internal class ConnpassRemoteDataSource @Inject constructor(
                     .doOnSuccess { localDataSource.cacheEvents(keyword, it) }
                     .subscribeOn(Schedulers.io())
 
-    override fun getFavorite(eventId: EventId): Maybe<Favorite> {
+    override fun getFavorite(eventId: EventId): Maybe<FavoriteEntity> {
         throw NotImplementedError()
     }
 

@@ -4,7 +4,7 @@ import io.reactivex.Completable
 import io.reactivex.Maybe
 import io.reactivex.schedulers.Schedulers
 import jp.cordea.kompas.infra.events.EventsResponse
-import jp.cordea.kompas.infra.favorite.Favorite
+import jp.cordea.kompas.infra.favorite.FavoriteEntity
 import jp.cordea.kompas.infra.favorite.FavoriteDaoProvider
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
@@ -26,14 +26,14 @@ internal class ConnpassLocalDataSource @Inject constructor(
         this.events = events
     }
 
-    fun getFavorite(eventId: EventId): Maybe<Favorite> =
+    fun getFavorite(eventId: EventId): Maybe<FavoriteEntity> =
             daoProvider.favoriteDao.getFavorite(eventId.value)
                     .subscribeOn(Schedulers.io())
 
     fun favorite(eventId: EventId): Completable =
             Completable.create {
                 daoProvider.favoriteDao.insertFavorite(
-                        Favorite(
+                        FavoriteEntity(
                                 eventId.value,
                                 ISODateTimeFormat.dateTime().print(DateTime())
                         )

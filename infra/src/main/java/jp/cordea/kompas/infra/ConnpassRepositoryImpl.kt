@@ -3,7 +3,7 @@ package jp.cordea.kompas.infra
 import io.reactivex.Maybe
 import io.reactivex.Single
 import jp.cordea.kompas.infra.events.EventsResponse
-import jp.cordea.kompas.infra.favorite.Favorite
+import jp.cordea.kompas.infra.favorite.FavoriteEntity
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -15,7 +15,7 @@ internal class ConnpassRepositoryImpl @Inject constructor(
     override fun getEvents(keyword: String): Single<EventsResponse> =
             localDataSource.getEvents(keyword).switchIfEmpty(remoteDataSource.getEvents(keyword))
 
-    override fun getFavorite(eventId: EventId): Maybe<Favorite> = localDataSource.getFavorite(eventId)
+    override fun getFavorite(eventId: EventId): Maybe<FavoriteEntity> = localDataSource.getFavorite(eventId)
 
     override fun favorite(eventId: EventId) = localDataSource.favorite(eventId)
 
