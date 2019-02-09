@@ -5,6 +5,7 @@ import io.reactivex.Maybe
 import io.reactivex.Single
 import jp.cordea.kompas.infra.events.EventsResponse
 import jp.cordea.kompas.infra.favorite.FavoriteEntity
+import jp.cordea.kompas.model.EventId
 
 interface ConnpassRepository {
     fun getEvents(keyword: String): Single<EventsResponse>

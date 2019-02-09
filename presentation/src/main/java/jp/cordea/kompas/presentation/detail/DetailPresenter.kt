@@ -3,7 +3,7 @@ package jp.cordea.kompas.presentation.detail
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import jp.cordea.kompas.infra.ConnpassRepository
-import jp.cordea.kompas.infra.EventId
+import jp.cordea.kompas.model.EventId
 import jp.cordea.kompas.presentation.ActivityScope
 import jp.cordea.kompas.presentation.SchedulerProvider
 import javax.inject.Inject
