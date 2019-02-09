@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/ui-detail/ui-detail.iml" filepath="$PROJECT_DIR$/ui-detail/ui-detail.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/ui-main/ui-main.iml" filepath="$PROJECT_DIR$/ui/ui-main/ui-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui-main/ui-main.iml" filepath="$PROJECT_DIR$/ui-main/ui-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui-shared/ui-shared.iml" filepath="$PROJECT_DIR$/ui/ui-shared/ui-shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui-shared/ui-shared.iml" filepath="$PROJECT_DIR$/ui-shared/ui-shared.iml" />
     </modules>
   </component>
 </project>
