@@ -1,9 +1,7 @@
-package jp.cordea.kompas.detail
+package jp.cordea.kompas.ui.detail
 
 import com.xwray.groupie.databinding.BindableItem
-import jp.cordea.kompas.R
-import jp.cordea.kompas.databinding.ListItemInfoBinding
-import jp.cordea.kompas.ui.main.MainListItemViewModel
+import jp.cordea.kompas.ui.detail.databinding.ListItemInfoBinding
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.ISODateTimeFormat
 import javax.inject.Inject
@@ -15,13 +13,13 @@ class InfoListItemViewModel(
         accepted: Int
 ) {
     companion object {
-        fun from(model: MainListItemViewModel) =
-                InfoListItemViewModel(
-                        model.startedAt,
-                        model.endedAt,
-                        model.limit,
-                        model.accepted
-                )
+//        fun from(model: MainListItemViewModel) =
+//                InfoListItemViewModel(
+//                        model.startedAt,
+//                        model.endedAt,
+//                        model.limit,
+//                        model.accepted
+//                )
     }
 
     private val startedAt = ISODateTimeFormat.dateTimeParser().parseDateTime(rawStartedAt)

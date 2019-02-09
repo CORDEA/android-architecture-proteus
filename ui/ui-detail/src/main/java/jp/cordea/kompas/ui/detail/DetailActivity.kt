@@ -1,4 +1,4 @@
-package jp.cordea.kompas.detail
+package jp.cordea.kompas.ui.detail
 
 import android.content.Context
 import android.content.Intent
@@ -8,10 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
-import jp.cordea.kompas.R
-import jp.cordea.kompas.databinding.ActivityDetailBinding
-import jp.cordea.kompas.ui.main.MainListItemViewModel
 import jp.cordea.kompas.presentation.detail.DetailContract
+import jp.cordea.kompas.ui.detail.databinding.ActivityDetailBinding
 import javax.inject.Inject
 
 class DetailActivity : AppCompatActivity(), DetailContract.View {
@@ -31,18 +29,18 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
         setSupportActionBar(binding.toolbar)
 
         binding.recyclerView.adapter = adapter
-        val model = intent.getParcelableExtra<MainListItemViewModel>(MODEL_KEY)
+//        val model = intent.getParcelableExtra<MainListItemViewModel>(MODEL_KEY)
         supportActionBar!!.run {
-            title = model.title
+//            title = model.title
             setDisplayHomeAsUpEnabled(true)
         }
 
         binding.favorite.setOnClickListener { presenter.clickedFavorite() }
         binding.unfavorite.setOnClickListener { presenter.clickedUnfavorite() }
 
-        adapter.updateDescription(DescriptionListItemViewModel.from(model))
-        adapter.updateInfo(InfoListItemViewModel.from(model))
-        presenter.create(model.eventId)
+//        adapter.updateDescription(DescriptionListItemViewModel.from(model))
+//        adapter.updateInfo(InfoListItemViewModel.from(model))
+//        presenter.create(model.eventId)
     }
 
     override fun onDestroy() {
@@ -71,9 +69,9 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
     companion object {
         private const val MODEL_KEY = "MODEL_KEY"
 
-        fun newIntent(context: Context, model: MainListItemViewModel) =
-                Intent(context, DetailActivity::class.java).apply {
-                    putExtra(MODEL_KEY, model)
-                }
+//        fun newIntent(context: Context, model: MainListItemViewModel) =
+//                Intent(context, DetailActivity::class.java).apply {
+//                    putExtra(MODEL_KEY, model)
+//                }
     }
 }

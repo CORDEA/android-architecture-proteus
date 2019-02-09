@@ -1,4 +1,4 @@
-package jp.cordea.kompas.detail
+package jp.cordea.kompas.ui.detail
 
 import dagger.Binds
 import dagger.Module

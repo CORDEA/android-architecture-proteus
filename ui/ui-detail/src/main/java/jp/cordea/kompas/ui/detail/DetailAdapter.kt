@@ -1,4 +1,4 @@
-package jp.cordea.kompas.detail
+package jp.cordea.kompas.ui.detail
 
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder

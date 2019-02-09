@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="jp.cordea.kompas.detail.InfoListItemViewModel" />
+            type="jp.cordea.kompas.ui.detail.InfoListItemViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
