@@ -1,4 +1,4 @@
-package jp.cordea.kompas.presentation
+package jp.cordea.kompas.presentation.shared
 
 import javax.inject.Scope
 

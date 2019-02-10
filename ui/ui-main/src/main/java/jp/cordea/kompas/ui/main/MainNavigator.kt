@@ -1,7 +1,7 @@
 package jp.cordea.kompas.ui.main
 
 import android.app.Activity
-import jp.cordea.kompas.presentation.ActivityScope
+import jp.cordea.kompas.presentation.shared.ActivityScope
 import javax.inject.Inject
 
 @ActivityScope

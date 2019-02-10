@@ -5,7 +5,7 @@ import io.reactivex.Single
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.model.EventId
 import jp.cordea.kompas.model.Favorite
-import jp.cordea.kompas.presentation.ConnpassRepository
+import jp.cordea.kompas.presentation.shared.ConnpassRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 

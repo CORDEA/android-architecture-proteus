@@ -2,7 +2,7 @@ package jp.cordea.kompas.infra
 
 import dagger.Binds
 import dagger.Module
-import jp.cordea.kompas.presentation.ConnpassRepository
+import jp.cordea.kompas.presentation.shared.ConnpassRepository
 
 @Module
 abstract class ConnpassRepositoryBindModule {

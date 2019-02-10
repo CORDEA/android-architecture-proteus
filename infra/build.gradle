@@ -3,7 +3,7 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation project(":presentation")
+    implementation project(":presentation-shared")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
@@ -15,10 +15,4 @@ dependencies {
 
     api 'io.reactivex.rxjava2:rxjava:2.2.3'
     api 'com.google.dagger:dagger-android:2.18'
-}
-
-compileKotlin {
-    kotlinOptions {
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
-    }
 }

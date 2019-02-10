@@ -3,9 +3,9 @@ package jp.cordea.kompas.presentation.main
 import io.reactivex.Observable
 import io.reactivex.disposables.SerialDisposable
 import jp.cordea.kompas.model.Event
-import jp.cordea.kompas.presentation.ActivityScope
-import jp.cordea.kompas.presentation.ConnpassRepository
-import jp.cordea.kompas.presentation.SchedulerProvider
+import jp.cordea.kompas.presentation.shared.ActivityScope
+import jp.cordea.kompas.presentation.shared.ConnpassRepository
+import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 
 interface MainContract {

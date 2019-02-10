@@ -3,9 +3,9 @@ package jp.cordea.kompas.ui.detail
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import jp.cordea.kompas.presentation.ActivityScope
 import jp.cordea.kompas.presentation.detail.DetailContract
 import jp.cordea.kompas.presentation.detail.DetailPresenter
+import jp.cordea.kompas.presentation.shared.ActivityScope
 
 @Module
 interface DetailActivityModule {

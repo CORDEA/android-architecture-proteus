@@ -10,7 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import jp.cordea.kompas.infra.ConnpassApiUrlProvider
 import jp.cordea.kompas.infra.favorite.FavoriteDao
 import jp.cordea.kompas.infra.favorite.FavoriteDaoProvider
-import jp.cordea.kompas.presentation.SchedulerProvider
+import jp.cordea.kompas.presentation.shared.SchedulerProvider
 
 @Module
 class AppModule {

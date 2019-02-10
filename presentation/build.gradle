@@ -3,16 +3,6 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    api project(":model")
+    api project(":presentation-shared")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    api 'io.reactivex.rxjava2:rxjava:2.2.3'
-    api 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-    api 'com.google.dagger:dagger-android:2.18'
-}
-
-compileKotlin {
-    kotlinOptions {
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
-    }
 }
