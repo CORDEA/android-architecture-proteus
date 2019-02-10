@@ -1,9 +1,7 @@
 package jp.cordea.kompas.model
 
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.Transient
+import java.io.Serializable
 
-@Serializable
 class Event(
         private val rawEventId: Int,
         val title: String,
@@ -14,8 +12,6 @@ class Event(
         val limit: Int,
         val ownerNickname: String,
         val accepted: Int
-) {
-    @Transient
-    val eventId
-        get() = EventId(rawEventId)
+) : Serializable {
+    val eventId get() = EventId(rawEventId)
 }
