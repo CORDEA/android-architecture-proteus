@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        DataBindingUtil.setContentView<FragmentMainBinding>(this, R.layout.fragment_main)
+        DataBindingUtil.setContentView<FragmentMainBinding>(this, R.layout.activity_main)
     }
 
     override fun onSupportNavigateUp(): Boolean =
