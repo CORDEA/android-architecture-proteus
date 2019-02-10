@@ -20,7 +20,7 @@ android {
 
 dependencies {
     implementation project(":ui:ui-shared")
-    implementation project(':presentation-main')
+    api project(':presentation-main')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
