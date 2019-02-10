@@ -10,7 +10,6 @@ class MainNavigator @Inject constructor(
         private val fragment: Fragment
 ) {
     fun navigateToDetail(model: MainListItemViewModel) {
-        NavHostFragment.findNavController(fragment)
-                .navigate(R.id.action_mainFragment_to_detailFragment)
+        NavHostFragment.findNavController(fragment).navigate(model.directions)
     }
 }

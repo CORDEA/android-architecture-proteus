@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -11,7 +13,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation project(":model")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     def nav_version = "1.0.0-beta01"
     api "android.arch.navigation:navigation-fragment:$nav_version"
     api "android.arch.navigation:navigation-ui:$nav_version"

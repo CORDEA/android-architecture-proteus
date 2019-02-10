@@ -10,7 +10,11 @@
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment">
+            <argument
+                android:name="event"
+                app:argType="jp.cordea.kompas.model.Event" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
