@@ -1,5 +1,6 @@
 package jp.cordea.kompas.infra
 
+import io.reactivex.Observable
 import io.reactivex.Single
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.shared.EventRepository
@@ -14,5 +15,7 @@ internal class EventRepositoryImpl @Inject constructor(
     override fun getEvents(keyword: String): Single<List<Event>> =
             localDataSource.getEvents(keyword)
                     .switchIfEmpty(remoteDataSource.getEvents(keyword))
-                    .map { it.events }
+                    .flatMapObservable { Observable.fromIterable(it.events) }
+                    .map { it.to() }
+                    .toList()
 }
