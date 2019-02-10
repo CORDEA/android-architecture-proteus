@@ -1,13 +1,16 @@
 package jp.cordea.kompas.ui.main
 
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import jp.cordea.kompas.presentation.shared.FragmentScope
 import javax.inject.Inject
 
 @FragmentScope
 class MainNavigator @Inject constructor(
-//        private val activity: Activity
+        private val fragment: Fragment
 ) {
     fun navigateToDetail(model: MainListItemViewModel) {
-//        activity.startActivity(DetailActivity.newIntent(activity, model))
+        NavHostFragment.findNavController(fragment)
+                .navigate(R.id.action_mainFragment_to_detailFragment)
     }
 }

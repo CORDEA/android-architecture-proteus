@@ -1,4 +1,4 @@
-include ':app', ':infra', ':model'
+include ':app', ':infra', ':model', ':navigation'
 
 include ':presentation:presentation-main'
 include ':presentation:presentation-detail'
