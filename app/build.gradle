@@ -47,6 +47,7 @@ configurations.all {
 dependencies {
     implementation project(":ui:ui-main")
     implementation project(":ui:ui-detail")
+    implementation project(":infra")
     implementation project(":presentation")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0'

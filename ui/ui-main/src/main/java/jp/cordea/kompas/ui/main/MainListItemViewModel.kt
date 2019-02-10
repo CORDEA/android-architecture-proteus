@@ -1,8 +1,8 @@
 package jp.cordea.kompas.ui.main
 
 import android.os.Parcelable
-import jp.cordea.kompas.infra.EventId
-import jp.cordea.kompas.infra.events.EventResponse
+import jp.cordea.kompas.model.Event
+import jp.cordea.kompas.model.EventId
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -18,17 +18,17 @@ class MainListItemViewModel(
         val accepted: Int
 ) : Parcelable {
     companion object {
-        fun from(response: EventResponse) =
+        fun from(event: Event) =
                 MainListItemViewModel(
-                        response.eventId.value,
-                        response.title,
-                        response.catch,
-                        response.ownerNickname,
-                        response.description,
-                        response.startedAt,
-                        response.endedAt,
-                        response.limit,
-                        response.accepted
+                        event.eventId.value,
+                        event.title,
+                        event.catch,
+                        event.ownerNickname,
+                        event.description,
+                        event.startedAt,
+                        event.endedAt,
+                        event.limit,
+                        event.accepted
                 )
     }
 

@@ -8,9 +8,9 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
-import jp.cordea.kompas.infra.events.EventResponse
-import jp.cordea.kompas.ui.main.databinding.ActivityMainBinding
+import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.main.MainContract
+import jp.cordea.kompas.ui.main.databinding.ActivityMainBinding
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), MainContract.View {
@@ -74,8 +74,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         binding.progressBar.isVisible = false
     }
 
-    override fun addItem(response: EventResponse) {
-        adapter.add(response)
+    override fun addItem(event: Event) {
+        adapter.add(event)
     }
 
     companion object {

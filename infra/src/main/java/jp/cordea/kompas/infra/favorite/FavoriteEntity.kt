@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import jp.cordea.kompas.model.EventId
 import jp.cordea.kompas.model.Favorite
 
-@Entity
+@Entity(tableName = "favorite")
 class FavoriteEntity(
         @PrimaryKey @ColumnInfo(name = "id") val rawId: Int,
         val addedAt: String

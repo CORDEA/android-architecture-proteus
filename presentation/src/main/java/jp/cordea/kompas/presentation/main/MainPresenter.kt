@@ -2,9 +2,9 @@ package jp.cordea.kompas.presentation.main
 
 import io.reactivex.Observable
 import io.reactivex.disposables.SerialDisposable
-import jp.cordea.kompas.infra.ConnpassRepository
-import jp.cordea.kompas.infra.events.EventResponse
+import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.ActivityScope
+import jp.cordea.kompas.presentation.ConnpassRepository
 import jp.cordea.kompas.presentation.SchedulerProvider
 import javax.inject.Inject
 
@@ -12,7 +12,7 @@ interface MainContract {
     interface View {
         fun startLoading()
         fun endLoading()
-        fun addItem(response: EventResponse)
+        fun addItem(event: Event)
     }
 
     interface Presenter {
@@ -43,7 +43,6 @@ class MainPresenter @Inject constructor(
         currentQuery = query
         view.startLoading()
         repository.getEvents(query)
-                .map { it.events }
                 .filter { it.isNotEmpty() }
                 .flatMapObservable {
                     Observable.fromIterable(it)

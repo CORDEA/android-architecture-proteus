@@ -4,8 +4,9 @@ import io.reactivex.Completable
 import io.reactivex.Maybe
 import io.reactivex.schedulers.Schedulers
 import jp.cordea.kompas.infra.events.EventsResponse
-import jp.cordea.kompas.infra.favorite.FavoriteEntity
 import jp.cordea.kompas.infra.favorite.FavoriteDaoProvider
+import jp.cordea.kompas.infra.favorite.FavoriteEntity
+import jp.cordea.kompas.model.EventId
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
 import javax.inject.Inject
