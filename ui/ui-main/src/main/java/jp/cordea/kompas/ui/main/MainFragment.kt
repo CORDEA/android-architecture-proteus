@@ -1,19 +1,18 @@
 package jp.cordea.kompas.ui.main
 
+import android.content.Context
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
+import android.view.*
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
-import androidx.databinding.DataBindingUtil
-import dagger.android.AndroidInjection
+import androidx.fragment.app.Fragment
+import dagger.android.support.AndroidSupportInjection
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.main.MainContract
-import jp.cordea.kompas.ui.main.databinding.ActivityMainBinding
+import jp.cordea.kompas.ui.main.databinding.FragmentMainBinding
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), MainContract.View {
+class MainFragment : Fragment(), MainContract.View {
 
     @Inject
     lateinit var adapter: MainAdapter
@@ -21,18 +20,21 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     @Inject
     lateinit var presenter: MainContract.Presenter
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: FragmentMainBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
-        super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        binding.recyclerView.adapter = adapter
-        presenter.create(savedInstanceState?.getString(QUERY_KEY) ?: "")
+    override fun onAttach(context: Context?) {
+        AndroidSupportInjection.inject(this)
+        super.onAttach(context)
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding.recyclerView.adapter = adapter
+        presenter.create(savedInstanceState?.getString(QUERY_KEY) ?: "")
+        return binding.root
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState?.putString(QUERY_KEY, presenter.currentQuery)
     }
@@ -42,8 +44,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         presenter.destroy()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_main, menu)
         val view = menu.findItem(R.id.action_search).actionView as SearchView
         view.setQuery(presenter.currentQuery, false)
         view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -54,7 +56,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
             override fun onQueryTextChange(newText: String?): Boolean = false
         })
-        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean =

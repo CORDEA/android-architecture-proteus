@@ -2,7 +2,6 @@ package jp.cordea.kompas
 
 import dagger.Module
 import jp.cordea.kompas.ui.detail.DetailActivityModule
-import jp.cordea.kompas.ui.main.MainActivityModule
 
 @Module(includes = [
     MainActivityModule::class,

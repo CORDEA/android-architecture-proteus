@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"  xmlns:y="http://www.yworks.com/xml/graphml">
+<key id="d0" for="node" yfiles.type="nodegraphics"/>   
+  <graph id="android-architecture-proteusG" edgedefault="undirected">
+      <node id="android-architecture-proteus">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>android-architecture-proteus</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="presentation">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>presentation</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="app">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>app</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="infra">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>infra</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="presentation-detail">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>presentation-detail</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="model">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>model</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="ui">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>ui</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="presentation-shared">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>presentation-shared</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="presentation-main">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>presentation-main</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="ui-main">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>ui-main</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="ui-shared">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>ui-shared</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <node id="ui-detail">
+         <data key="d0" ><y:ShapeNode><y:Shape type="rectangle"/><y:Geometry width="100.0"/><y:NodeLabel>ui-detail</y:NodeLabel></y:ShapeNode></data>
+      </node>
+      <edge target="infra" source="app">
+      </edge>
+      <edge target="presentation-detail" source="app">
+      </edge>
+      <edge target="presentation-detail" source="ui-detail">
+      </edge>
+      <edge target="model" source="app">
+      </edge>
+      <edge target="model" source="infra">
+      </edge>
+      <edge target="model" source="presentation-detail">
+      </edge>
+      <edge target="model" source="presentation-shared">
+      </edge>
+      <edge target="model" source="presentation-main">
+      </edge>
+      <edge target="model" source="ui-main">
+      </edge>
+      <edge target="model" source="ui-detail">
+      </edge>
+      <edge target="presentation-shared" source="app">
+      </edge>
+      <edge target="presentation-shared" source="infra">
+      </edge>
+      <edge target="presentation-shared" source="presentation-detail">
+      </edge>
+      <edge target="presentation-shared" source="presentation-main">
+      </edge>
+      <edge target="presentation-shared" source="ui-main">
+      </edge>
+      <edge target="presentation-shared" source="ui-detail">
+      </edge>
+      <edge target="presentation-main" source="app">
+      </edge>
+      <edge target="presentation-main" source="ui-main">
+      </edge>
+      <edge target="ui-main" source="app">
+      </edge>
+      <edge target="ui-shared" source="app">
+      </edge>
+      <edge target="ui-shared" source="ui-main">
+      </edge>
+      <edge target="ui-shared" source="ui-detail">
+      </edge>
+      <edge target="ui-detail" source="app">
+      </edge>
+  </graph>
+</graphml>
