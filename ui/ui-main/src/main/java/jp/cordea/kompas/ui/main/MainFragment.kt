@@ -31,12 +31,14 @@ class MainFragment : Fragment(), MainContract.View {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         binding.recyclerView.adapter = adapter
         presenter.create(savedInstanceState?.getString(QUERY_KEY) ?: "")
+
+        setHasOptionsMenu(true)
         return binding.root
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.putString(QUERY_KEY, presenter.currentQuery)
+        outState.putString(QUERY_KEY, presenter.currentQuery)
     }
 
     override fun onDestroy() {
