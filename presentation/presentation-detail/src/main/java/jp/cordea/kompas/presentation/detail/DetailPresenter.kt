@@ -3,8 +3,8 @@ package jp.cordea.kompas.presentation.detail
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import jp.cordea.kompas.model.EventId
-import jp.cordea.kompas.presentation.shared.ActivityScope
 import jp.cordea.kompas.presentation.shared.FavoriteRepository
+import jp.cordea.kompas.presentation.shared.FragmentScope
 import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 
@@ -22,7 +22,7 @@ interface DetailContract {
     }
 }
 
-@ActivityScope
+@FragmentScope
 internal class DetailPresenter @Inject constructor(
         private val schedulerProvider: SchedulerProvider,
         private val repository: FavoriteRepository,

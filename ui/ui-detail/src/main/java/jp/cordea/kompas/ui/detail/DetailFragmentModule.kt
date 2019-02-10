@@ -5,20 +5,20 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import jp.cordea.kompas.presentation.detail.DetailContract
 import jp.cordea.kompas.presentation.detail.DetailPresenterBindModule
-import jp.cordea.kompas.presentation.shared.ActivityScope
+import jp.cordea.kompas.presentation.shared.FragmentScope
 
 @Module
-interface DetailActivityModule {
-    @ActivityScope
+interface DetailFragmentModule {
+    @FragmentScope
     @ContributesAndroidInjector(modules = [
-        DetailActivityBindModule::class,
+        DetailFragmentBindModule::class,
         DetailPresenterBindModule::class
     ])
-    fun contributeDetailActivity(): DetailActivity
+    fun contributeDetailFragment(): DetailFragment
 }
 
 @Module
-interface DetailActivityBindModule {
+interface DetailFragmentBindModule {
     @Binds
-    fun bindView(activity: DetailActivity): DetailContract.View
+    fun bindView(activity: DetailFragment): DetailContract.View
 }

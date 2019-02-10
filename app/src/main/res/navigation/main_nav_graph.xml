@@ -8,4 +8,8 @@
         android:id="@+id/mainFragment"
         android:name="jp.cordea.kompas.ui.main.MainFragment"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="jp.cordea.kompas.ui.detail.DetailFragment"
+        tools:layout="@layout/fragment_detail" />
 </navigation>
