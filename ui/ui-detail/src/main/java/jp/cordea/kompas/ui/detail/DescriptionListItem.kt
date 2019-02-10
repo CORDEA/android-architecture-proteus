@@ -3,6 +3,7 @@ package jp.cordea.kompas.ui.detail
 import androidx.core.text.HtmlCompat
 import androidx.core.text.HtmlCompat.FROM_HTML_SEPARATOR_LINE_BREAK_HEADING
 import com.xwray.groupie.databinding.BindableItem
+import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.ui.detail.databinding.ListItemDescriptionBinding
 import javax.inject.Inject
 
@@ -10,7 +11,7 @@ class DescriptionListItemViewModel(
         val description: String
 ) {
     companion object {
-//        fun from(model: MainListItemViewModel) = DescriptionListItemViewModel(model.description)
+        fun from(event: Event) = DescriptionListItemViewModel(event.description)
     }
 }
 

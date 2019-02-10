@@ -17,5 +17,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     def nav_version = "1.0.0-beta01"
     api "android.arch.navigation:navigation-fragment:$nav_version"
+    api "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     api "android.arch.navigation:navigation-ui:$nav_version"
+    api "android.arch.navigation:navigation-ui-ktx:$nav_version"
 }
