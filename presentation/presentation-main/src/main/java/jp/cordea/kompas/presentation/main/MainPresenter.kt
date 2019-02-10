@@ -24,7 +24,7 @@ interface MainContract {
 }
 
 @ActivityScope
-class MainPresenter @Inject constructor(
+internal class MainPresenter @Inject constructor(
         private val schedulerProvider: SchedulerProvider,
         private val repository: ConnpassRepository,
         private val view: MainContract.View

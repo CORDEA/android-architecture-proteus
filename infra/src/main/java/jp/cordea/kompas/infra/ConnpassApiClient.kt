@@ -10,7 +10,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class ConnpassApiClient @Inject constructor(
+internal class ConnpassApiClient @Inject constructor(
         provider: ConnpassApiUrlProvider
 ) : ConnpassApi {
     private val gson = GsonBuilder().create()

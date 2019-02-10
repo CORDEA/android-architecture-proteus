@@ -7,13 +7,13 @@ import androidx.room.Query
 import io.reactivex.Maybe
 
 @Dao
-interface FavoriteDao {
+abstract class FavoriteDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertFavorite(favorite: FavoriteEntity)
+    internal abstract fun insertFavorite(favorite: FavoriteEntity)
 
     @Query("DELETE FROM favorite WHERE id = :id")
-    fun deleteFavorite(id: Int)
+    internal abstract fun deleteFavorite(id: Int)
 
     @Query("SELECT * FROM favorite WHERE id = :id LIMIT 1")
-    fun getFavorite(id: Int): Maybe<FavoriteEntity>
+    internal abstract fun getFavorite(id: Int): Maybe<FavoriteEntity>
 }

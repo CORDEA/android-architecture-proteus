@@ -23,7 +23,7 @@ interface DetailContract {
 }
 
 @ActivityScope
-class DetailPresenter @Inject constructor(
+internal class DetailPresenter @Inject constructor(
         private val schedulerProvider: SchedulerProvider,
         private val repository: ConnpassRepository,
         private val view: DetailContract.View

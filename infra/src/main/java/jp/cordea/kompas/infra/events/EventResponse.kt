@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.model.EventId
 
-class EventResponse(
+internal class EventResponse(
         @SerializedName("event_id") override val eventId: EventId,
         @SerializedName("title") override val title: String,
         @SerializedName("catch") override val catch: String,

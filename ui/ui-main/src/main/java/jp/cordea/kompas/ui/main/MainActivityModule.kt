@@ -5,23 +5,21 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import jp.cordea.kompas.presentation.main.MainContract
-import jp.cordea.kompas.presentation.main.MainPresenter
+import jp.cordea.kompas.presentation.main.MainPresenterBindModule
 import jp.cordea.kompas.presentation.shared.ActivityScope
 
 @Module
 interface MainActivityModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [
-        MainActivityBindModule::class
+        MainActivityBindModule::class,
+        MainPresenterBindModule::class
     ])
     fun contributeMainActivity(): MainActivity
 }
 
 @Module
 interface MainActivityBindModule {
-    @Binds
-    fun bindPresenter(presenter: MainPresenter): MainContract.Presenter
-
     @Binds
     fun bindView(activity: MainActivity): MainContract.View
 
