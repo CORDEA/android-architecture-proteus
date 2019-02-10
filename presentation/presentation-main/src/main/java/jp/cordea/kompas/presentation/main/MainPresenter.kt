@@ -4,7 +4,7 @@ import io.reactivex.Observable
 import io.reactivex.disposables.SerialDisposable
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.shared.ActivityScope
-import jp.cordea.kompas.presentation.shared.ConnpassRepository
+import jp.cordea.kompas.presentation.shared.EventRepository
 import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 
@@ -26,7 +26,7 @@ interface MainContract {
 @ActivityScope
 internal class MainPresenter @Inject constructor(
         private val schedulerProvider: SchedulerProvider,
-        private val repository: ConnpassRepository,
+        private val repository: EventRepository,
         private val view: MainContract.View
 ) : MainContract.Presenter {
     private val serialDisposable = SerialDisposable()

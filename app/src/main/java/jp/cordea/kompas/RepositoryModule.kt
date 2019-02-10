@@ -1,9 +1,9 @@
 package jp.cordea.kompas
 
 import dagger.Module
-import jp.cordea.kompas.infra.ConnpassRepositoryBindModule
+import jp.cordea.kompas.infra.RepositoryBindModule
 
 @Module(includes = [
-    ConnpassRepositoryBindModule::class
+    RepositoryBindModule::class
 ])
 interface RepositoryModule

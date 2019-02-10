@@ -4,7 +4,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import jp.cordea.kompas.model.EventId
 import jp.cordea.kompas.presentation.shared.ActivityScope
-import jp.cordea.kompas.presentation.shared.ConnpassRepository
+import jp.cordea.kompas.presentation.shared.FavoriteRepository
 import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 
@@ -25,7 +25,7 @@ interface DetailContract {
 @ActivityScope
 internal class DetailPresenter @Inject constructor(
         private val schedulerProvider: SchedulerProvider,
-        private val repository: ConnpassRepository,
+        private val repository: FavoriteRepository,
         private val view: DetailContract.View
 ) : DetailContract.Presenter {
     private val compositeDisposable = CompositeDisposable()

@@ -7,9 +7,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-internal class ConnpassRemoteDataSource @Inject constructor(
+internal class EventRemoteDataSource @Inject constructor(
         private val apiClient: ConnpassApiClient,
-        private val localDataSource: ConnpassLocalDataSource
+        private val localDataSource: EventLocalDataSource
 ) {
     fun getEvents(keyword: String): Single<EventsResponse> =
             apiClient.getEvents(keyword, EVENT_LIMIT)
