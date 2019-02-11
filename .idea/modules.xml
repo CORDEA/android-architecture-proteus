@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/android-architecture-proteus.iml" filepath="$PROJECT_DIR$/android-architecture-proteus.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/di/di.iml" filepath="$PROJECT_DIR$/di/di.iml" />
+      <module fileurl="file://$PROJECT_DIR$/di/di-scope/di-scope.iml" filepath="$PROJECT_DIR$/di/di-scope/di-scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/di-scope/di-scope.iml" filepath="$PROJECT_DIR$/di-scope/di-scope.iml" />
       <module fileurl="file://$PROJECT_DIR$/infra/infra.iml" filepath="$PROJECT_DIR$/infra/infra.iml" />
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/navigation/navigation.iml" filepath="$PROJECT_DIR$/navigation/navigation.iml" />

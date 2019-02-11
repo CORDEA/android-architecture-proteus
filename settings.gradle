@@ -7,3 +7,5 @@ include ':presentation:presentation-shared'
 include ':ui:ui-main'
 include ':ui:ui-detail'
 include ':ui:ui-shared'
+
+include ':di:di-scope'
