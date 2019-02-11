@@ -12,18 +12,5 @@ android {
 }
 
 dependencies {
-    api project(":navigation")
     implementation Deps.kotlin_stdlib
-    api Deps.appcompat
-    api Deps.material
-    api Deps.constraintlayout
-    api Deps.core_ktx
-
-    api Deps.dagger_android
-    api Deps.dagger_android_support
-    api Deps.dagger_android_support
-
-    api Deps.groupie
-    api Deps.groupie_ext
-    api Deps.groupie_databinding
 }

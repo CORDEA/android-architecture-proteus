@@ -2,8 +2,6 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -19,15 +17,21 @@ android {
 }
 
 dependencies {
-    api project(":ui:ui-shared")
+    implementation project(":ui:ui-shared")
+    implementation project(":navigation")
     api project(':presentation:presentation-main')
     implementation Deps.kotlin_stdlib
 
+    implementation Deps.appcompat
+    implementation Deps.constraintlayout
+    implementation Deps.core_ktx
+
+    implementation Deps.dagger_android
+    implementation Deps.dagger_android_support
     kapt Deps.dagger_compiler
     kapt Deps.dagger_android_processor
-}
 
-androidExtensions {
-    experimental = true
-    features = ["parcelize"]
+    implementation Deps.groupie
+    implementation Deps.groupie_ext
+    implementation Deps.groupie_databinding
 }

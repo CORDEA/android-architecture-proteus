@@ -45,14 +45,24 @@ configurations.all {
 dependencies {
     implementation project(":ui:ui-main")
     implementation project(":ui:ui-detail")
+    implementation project(":ui:ui-shared")
+    implementation project(":navigation")
     implementation project(":infra")
 
     implementation Deps.kotlin_stdlib
 
+    implementation Deps.appcompat
+    implementation Deps.core_ktx
+
     kapt Deps.room_compiler
 
+    implementation Deps.dagger_android
+    implementation Deps.dagger_android_support
     kapt Deps.dagger_compiler
     kapt Deps.dagger_android_processor
+
+    implementation Deps.groupie
+    implementation Deps.groupie_databinding
 
     implementation Deps.rxandroid
 }
