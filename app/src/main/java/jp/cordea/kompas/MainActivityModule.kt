@@ -8,7 +8,7 @@ import jp.cordea.kompas.ui.main.MainFragmentModule
 
 @Module
 interface MainActivityModule {
-    @jp.cordea.kompas.di.scope.ActivityScope
+    @ActivityScope
     @ContributesAndroidInjector(modules = [
         MainFragmentModule::class,
         DetailFragmentModule::class
