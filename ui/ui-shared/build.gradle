@@ -13,17 +13,17 @@ android {
 
 dependencies {
     api project(":navigation")
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    api 'androidx.appcompat:appcompat:1.0.0'
-    api 'com.google.android.material:material:1.0.0'
-    api 'androidx.constraintlayout:constraintlayout:1.1.3'
-    api 'androidx.core:core-ktx:1.0.0'
+    implementation Deps.kotlin_stdlib
+    api Deps.appcompat
+    api Deps.material
+    api Deps.constraintlayout
+    api Deps.core_ktx
 
-    api 'com.google.dagger:dagger-android:2.18'
-    api 'com.google.dagger:dagger-android-support:2.18'
-    api 'androidx.core:core-ktx:1.0.0'
+    api Deps.dagger_android
+    api Deps.dagger_android_support
+    api Deps.dagger_android_support
 
-    api 'com.xwray:groupie:2.1.0'
-    api 'com.xwray:groupie-kotlin-android-extensions:2.1.0'
-    api 'com.xwray:groupie-databinding:2.1.0'
+    api Deps.groupie
+    api Deps.groupie_ext
+    api Deps.groupie_databinding
 }

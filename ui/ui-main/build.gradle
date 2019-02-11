@@ -21,10 +21,10 @@ android {
 dependencies {
     api project(":ui:ui-shared")
     api project(':presentation:presentation-main')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.kotlin_stdlib
 
-    kapt 'com.google.dagger:dagger-android-processor:2.18'
-    kapt 'com.google.dagger:dagger-compiler:2.18'
+    kapt Deps.dagger_compiler
+    kapt Deps.dagger_android_processor
 }
 
 androidExtensions {

@@ -4,9 +4,9 @@ apply plugin: 'kotlin'
 
 dependencies {
     api project(":model")
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.kotlin_stdlib
 
-    api 'io.reactivex.rxjava2:rxjava:2.2.3'
-    api 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-    api 'com.google.dagger:dagger-android:2.18'
+    api Deps.rxjava
+    api Deps.rxkotlin
+    api Deps.dagger_android
 }

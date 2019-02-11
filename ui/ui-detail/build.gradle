@@ -21,12 +21,12 @@ android {
 dependencies {
     api project(":ui:ui-shared")
     api project(':presentation:presentation-detail')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.kotlin_stdlib
 
-    implementation 'joda-time:joda-time:2.10'
+    implementation Deps.joda_time
 
-    kapt 'com.google.dagger:dagger-android-processor:2.18'
-    kapt 'com.google.dagger:dagger-compiler:2.18'
+    kapt Deps.dagger_compiler
+    kapt Deps.dagger_android_processor
 }
 
 androidExtensions {

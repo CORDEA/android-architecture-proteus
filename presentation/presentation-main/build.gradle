@@ -4,5 +4,5 @@ apply plugin: 'kotlin'
 
 dependencies {
     api project(":presentation:presentation-shared")
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.kotlin_stdlib
 }

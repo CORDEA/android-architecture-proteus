@@ -4,18 +4,19 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation project(":presentation:presentation-shared")
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation Deps.kotlin_stdlib
+    implementation Deps.retrofit
+    implementation Deps.retrofit_gson
+    implementation Deps.retrofit_rxjava
 
-    api 'androidx.room:room-rxjava2:2.1.0-alpha01'
-    api 'androidx.room:room-runtime:2.1.0-alpha01'
+    implementation Deps.gson
 
-    api 'io.reactivex.rxjava2:rxjava:2.2.3'
+    api Deps.room_runtime
+    api Deps.room_rxjava
 
-    implementation 'joda-time:joda-time:2.10'
+    api Deps.rxjava
 
-    implementation 'com.google.dagger:dagger-android:2.18'
+    implementation Deps.joda_time
+
+    implementation Deps.dagger_android
 }

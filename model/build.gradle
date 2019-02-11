@@ -3,7 +3,7 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.kotlin_stdlib
 }
 
 compileKotlin {
