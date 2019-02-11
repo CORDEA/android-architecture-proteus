@@ -2,9 +2,9 @@ package jp.cordea.kompas.presentation.main
 
 import io.reactivex.Observable
 import io.reactivex.disposables.SerialDisposable
+import jp.cordea.kompas.di.scope.FragmentScope
 import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.presentation.shared.EventRepository
-import jp.cordea.kompas.presentation.shared.FragmentScope
 import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 

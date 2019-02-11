@@ -46,6 +46,7 @@ dependencies {
     implementation project(":ui:ui-main")
     implementation project(":ui:ui-detail")
     implementation project(":ui:ui-shared")
+    implementation project(":di:di-scope")
     implementation project(":navigation")
     implementation project(":infra")
 

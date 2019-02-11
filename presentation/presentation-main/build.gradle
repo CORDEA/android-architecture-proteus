@@ -4,5 +4,6 @@ apply plugin: 'kotlin'
 
 dependencies {
     api project(":presentation:presentation-shared")
+    implementation project(":di:di-scope")
     implementation Deps.kotlin_stdlib
 }

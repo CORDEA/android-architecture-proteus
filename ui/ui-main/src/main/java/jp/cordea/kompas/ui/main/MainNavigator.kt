@@ -2,7 +2,7 @@ package jp.cordea.kompas.ui.main
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import jp.cordea.kompas.presentation.shared.FragmentScope
+import jp.cordea.kompas.di.scope.FragmentScope
 import javax.inject.Inject
 
 @FragmentScope

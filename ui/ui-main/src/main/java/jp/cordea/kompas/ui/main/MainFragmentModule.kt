@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import jp.cordea.kompas.di.scope.FragmentScope
 import jp.cordea.kompas.presentation.main.MainContract
 import jp.cordea.kompas.presentation.main.MainPresenterBindModule
-import jp.cordea.kompas.presentation.shared.FragmentScope
 
 @Module
 interface MainFragmentModule {
