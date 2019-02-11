@@ -19,8 +19,9 @@ android {
 dependencies {
     implementation project(":ui:ui-shared")
     implementation project(":di:di-scope")
+    implementation project(":model")
     implementation project(":navigation")
-    api project(':presentation:presentation-main')
+    implementation project(':presentation:presentation-main')
     implementation Deps.kotlin_stdlib
 
     implementation Deps.appcompat

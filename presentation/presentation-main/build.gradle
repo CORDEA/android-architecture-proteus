@@ -3,7 +3,9 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    api project(":presentation:presentation-shared")
+    implementation project(":presentation:presentation-shared")
     implementation project(":di:di-scope")
     implementation Deps.kotlin_stdlib
+    implementation Deps.rxkotlin
+    implementation Deps.dagger_android
 }

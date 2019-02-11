@@ -4,6 +4,7 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation project(":presentation:presentation-shared")
+    implementation project(":model")
     implementation Deps.kotlin_stdlib
     implementation Deps.retrofit
     implementation Deps.retrofit_gson
@@ -14,7 +15,7 @@ dependencies {
     api Deps.room_runtime
     api Deps.room_rxjava
 
-    api Deps.rxjava
+    implementation Deps.rxjava
 
     implementation Deps.joda_time
 

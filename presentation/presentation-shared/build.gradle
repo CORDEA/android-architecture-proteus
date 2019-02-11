@@ -7,6 +7,4 @@ dependencies {
     implementation Deps.kotlin_stdlib
 
     api Deps.rxjava
-    api Deps.rxkotlin
-    api Deps.dagger_android
 }
