@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/di/di.iml" filepath="$PROJECT_DIR$/di/di.iml" />
       <module fileurl="file://$PROJECT_DIR$/di/di-scope/di-scope.iml" filepath="$PROJECT_DIR$/di/di-scope/di-scope.iml" />
       <module fileurl="file://$PROJECT_DIR$/di-scope/di-scope.iml" filepath="$PROJECT_DIR$/di-scope/di-scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/infra/infra.iml" filepath="$PROJECT_DIR$/infra/infra.iml" />
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/navigation/navigation.iml" filepath="$PROJECT_DIR$/navigation/navigation.iml" />
