@@ -13,7 +13,8 @@ interface MainFragmentModule {
     @FragmentScope
     @ContributesAndroidInjector(modules = [
         MainFragmentBindModule::class,
-        MainPresenterBindModule::class
+        MainPresenterBindModule::class,
+        MainListItemAssistedModule::class
     ])
     fun contributeMainFragment(): MainFragment
 }

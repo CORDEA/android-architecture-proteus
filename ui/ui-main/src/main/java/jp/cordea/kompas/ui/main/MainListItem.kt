@@ -1,15 +1,18 @@
 package jp.cordea.kompas.ui.main
 
+import com.squareup.inject.assisted.Assisted
+import com.squareup.inject.assisted.AssistedInject
 import com.xwray.groupie.databinding.BindableItem
 import jp.cordea.kompas.ui.main.databinding.ListItemMainBinding
-import javax.inject.Inject
 
-class MainListItem @Inject constructor(
-        private val navigator: MainNavigator
+class MainListItem @AssistedInject constructor(
+        private val navigator: MainNavigator,
+        @Assisted val model: MainListItemViewModel
 ) : BindableItem<ListItemMainBinding>() {
-    private lateinit var model: MainListItemViewModel
-
-    fun update(model: MainListItemViewModel) = apply { this.model = model }
+    @AssistedInject.Factory
+    interface Factory {
+        fun create(model: MainListItemViewModel): MainListItem
+    }
 
     override fun getLayout(): Int = R.layout.list_item_main
 
