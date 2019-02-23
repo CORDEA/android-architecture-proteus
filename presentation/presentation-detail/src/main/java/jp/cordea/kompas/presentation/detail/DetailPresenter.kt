@@ -3,8 +3,8 @@ package jp.cordea.kompas.presentation.detail
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import jp.cordea.kompas.di.scope.FragmentScope
+import jp.cordea.kompas.domain.FavoriteRepository
 import jp.cordea.kompas.model.EventId
-import jp.cordea.kompas.presentation.shared.FavoriteRepository
 import jp.cordea.kompas.presentation.shared.SchedulerProvider
 import javax.inject.Inject
 

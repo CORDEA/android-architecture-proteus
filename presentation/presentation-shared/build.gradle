@@ -3,8 +3,7 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    api project(":model")
     implementation Deps.kotlin_stdlib
 
-    api Deps.rxjava
+    implementation Deps.rxjava
 }

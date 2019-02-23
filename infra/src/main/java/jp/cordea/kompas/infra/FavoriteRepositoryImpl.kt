@@ -1,9 +1,9 @@
 package jp.cordea.kompas.infra
 
 import io.reactivex.Maybe
+import jp.cordea.kompas.domain.FavoriteRepository
 import jp.cordea.kompas.model.EventId
 import jp.cordea.kompas.model.Favorite
-import jp.cordea.kompas.presentation.shared.FavoriteRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 

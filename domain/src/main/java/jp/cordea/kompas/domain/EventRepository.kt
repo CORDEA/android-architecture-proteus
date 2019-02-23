@@ -1,4 +1,4 @@
-package jp.cordea.kompas.presentation.shared
+package jp.cordea.kompas.domain
 
 import io.reactivex.Single
 import jp.cordea.kompas.model.Event

@@ -1,4 +1,4 @@
-package jp.cordea.kompas.presentation.shared
+package jp.cordea.kompas.domain
 
 import io.reactivex.Completable
 import io.reactivex.Maybe

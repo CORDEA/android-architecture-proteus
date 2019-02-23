@@ -2,8 +2,8 @@ package jp.cordea.kompas.infra
 
 import io.reactivex.Observable
 import io.reactivex.Single
+import jp.cordea.kompas.domain.EventRepository
 import jp.cordea.kompas.model.Event
-import jp.cordea.kompas.presentation.shared.EventRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 

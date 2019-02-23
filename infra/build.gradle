@@ -3,7 +3,7 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation project(":presentation:presentation-shared")
+    implementation project(":domain")
     implementation project(":model")
     implementation Deps.kotlin_stdlib
     implementation Deps.retrofit

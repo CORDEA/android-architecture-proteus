@@ -2,8 +2,8 @@ package jp.cordea.kompas.infra
 
 import dagger.Binds
 import dagger.Module
-import jp.cordea.kompas.presentation.shared.EventRepository
-import jp.cordea.kompas.presentation.shared.FavoriteRepository
+import jp.cordea.kompas.domain.EventRepository
+import jp.cordea.kompas.domain.FavoriteRepository
 
 @Module
 abstract class RepositoryBindModule {
