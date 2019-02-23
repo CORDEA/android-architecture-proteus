@@ -29,6 +29,9 @@ object Deps {
     val dagger_android_processor = "com.google.dagger:dagger-android-processor:$dagger_version"
     val dagger_compiler = "com.google.dagger:dagger-compiler:$dagger_version"
 
+    val assisted_inject = "com.squareup.inject:assisted-inject-annotations-dagger2:0.3.2"
+    val assisted_inject_processor = "com.squareup.inject:assisted-inject-processor-dagger2:0.3.2"
+
     val javax_inject = "javax.inject:javax.inject:1"
 
     private val groupie_version = "2.1.0"

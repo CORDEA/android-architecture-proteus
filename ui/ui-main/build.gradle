@@ -33,6 +33,9 @@ dependencies {
     kapt Deps.dagger_compiler
     kapt Deps.dagger_android_processor
 
+    implementation Deps.assisted_inject
+    kapt Deps.assisted_inject_processor
+
     implementation Deps.groupie
     implementation Deps.groupie_ext
     implementation Deps.groupie_databinding
