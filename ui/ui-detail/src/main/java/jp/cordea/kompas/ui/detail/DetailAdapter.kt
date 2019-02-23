@@ -5,18 +5,11 @@ import com.xwray.groupie.ViewHolder
 import javax.inject.Inject
 
 class DetailAdapter @Inject constructor(
-        private val descriptionListItem: DescriptionListItem,
-        private val infoListItem: InfoListItem
 ) : GroupAdapter<ViewHolder>() {
-    init {
-        addAll(listOf(infoListItem, descriptionListItem))
-    }
-
-    fun updateDescription(model: DescriptionListItemViewModel) {
-        descriptionListItem.update(model)
-    }
-
-    fun updateInfo(model: InfoListItemViewModel) {
-        infoListItem.update(model)
+    fun add(infoModel: InfoListItemViewModel, descriptionModel: DescriptionListItemViewModel) {
+        addAll(listOf(
+                InfoListItem(infoModel),
+                DescriptionListItem(descriptionModel)
+        ))
     }
 }

@@ -5,7 +5,6 @@ import jp.cordea.kompas.model.Event
 import jp.cordea.kompas.ui.detail.databinding.ListItemInfoBinding
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.ISODateTimeFormat
-import javax.inject.Inject
 
 class InfoListItemViewModel(
         rawStartedAt: String,
@@ -32,11 +31,9 @@ class InfoListItemViewModel(
     val limit: String = "$accepted / $limit"
 }
 
-class InfoListItem @Inject constructor() : BindableItem<ListItemInfoBinding>() {
-    private lateinit var model: InfoListItemViewModel
-
-    fun update(model: InfoListItemViewModel) = apply { this.model = model }
-
+class InfoListItem(
+        private val model: InfoListItemViewModel
+) : BindableItem<ListItemInfoBinding>() {
     override fun getLayout(): Int = R.layout.list_item_info
 
     override fun bind(binding: ListItemInfoBinding, position: Int) {

@@ -43,8 +43,10 @@ class DetailFragment : Fragment(), DetailContract.View {
         binding.favorite.setOnClickListener { presenter.clickedFavorite() }
         binding.unfavorite.setOnClickListener { presenter.clickedUnfavorite() }
 
-        adapter.updateDescription(DescriptionListItemViewModel.from(event))
-        adapter.updateInfo(InfoListItemViewModel.from(event))
+        adapter.add(
+                InfoListItemViewModel.from(event),
+                DescriptionListItemViewModel.from(event)
+        )
         presenter.create(event.eventId)
         return binding.root
     }
