@@ -1,5 +1,5 @@
-# android-architecture-2018
+# android-architecture-proteus
 
-Android architecture 2018
+Android architecture proteus
 
 ![arch](images/arch.png)
